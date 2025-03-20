@@ -88,8 +88,8 @@
 
         <!-- 지역 필터링 결과가 없을 경우 -->
         <!-- 배열.some(콜백) : 
-         배열 내 요소 중 하나라도 true가 반환되면 true
-         모두 다 false면 false  -->
+        배열 내 요소 중 하나라도 true가 반환되면 true
+        모두 다 false면 false  -->
         <p
           v-if="users.length > 0 && !users.some(user => selectRegion === '' || user.region === selectRegion)"
         >
