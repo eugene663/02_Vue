@@ -1,14 +1,26 @@
 <template>
-  <li><input type="checkbox" v-model="checked" />옵션1</li>
+  <li><input type="checkbox" :checked="checked" />{{ id }} - {{ name }}</li>
 </template>
 
 <script>
 export default {
   name: 'CheckboxItem',
-  data() {
-    return {
-      checked: false,
-    };
+  props: {
+    id: [Number, String],
+    name: {
+      validator(v) {
+        return typeof v !== 'string'
+          ? false
+          : v.trim().length >= 4
+          ? true
+          : false;
+      },
+    },
+    checked: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
   },
 };
 </script>
