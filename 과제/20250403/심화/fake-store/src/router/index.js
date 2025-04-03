@@ -33,17 +33,17 @@ const router = createRouter({
     {
       path: '/product/:id',
       name: 'product/id',
-      component: () => import('../pages/ProductDetailPage.vue'),
+      component: () => import('../components/ProductDetailPage.vue'),
     },
     {
       path: '/product/write',
       name: 'product/write',
-      component: () => import('../pages/ProductWritePage.vue'),
+      component: () => import('../components/ProductWritePage.vue'),
     },
     {
       path: '/product/edit',
       name: 'product/edit',
-      component: () => import('../pages/ProductEditPage.vue'),
+      component: () => import('../components/ProductEditPage.vue'),
     },
   ],
 });

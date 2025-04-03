@@ -1,34 +1,43 @@
 <template>
-  <div>
-    <h2>상품 목록</h2>
-    <ul class="list-group">
+  <div class="mt-3">
+    <ul v-if="products.length" class="list-group">
       <ProductItem
         v-for="product in products"
         :key="product.id"
         :ProductItem="product"
       />
     </ul>
+    <p v-else>상품을 불러오는 중...</p>
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import ProductItem from './ProductItem.vue';
-import { get } from '@/api/product.js'; // Fakestore API 연동
+import ProductItem from '@/components/ProductItem.vue';
+import { get } from '@/api/product.js';
 
-const products = ref([]); // 상품 리스트를 저장할 반응형 변수
+// props로 category와 title을 받음
+const props = defineProps({
+  category: { type: String, required: true },
+  title: { type: String, required: true }, 
+});
+
+const products = ref([]);
 
 onMounted(async () => {
   try {
-    products.value = await get(); // API 호출하여 상품 리스트 가져오기
+    const data = await get(`category/${encodeURIComponent(props.category)}`);
+    console.log(`${props.title} 데이터:`, data);
+    products.value = data;
   } catch (error) {
-    console.error('상품 목록을 불러오는 데 실패했습니다:', error);
+    console.error(`${props.title} 데이터를 불러오는 데 실패했습니다:`, error);
   }
 });
 </script>
 
-<style scoped>
-.list-group {
-  padding: 0;
+<style>
+ul{
+  list-style-type: none;
+  margin:10px;
 }
 </style>

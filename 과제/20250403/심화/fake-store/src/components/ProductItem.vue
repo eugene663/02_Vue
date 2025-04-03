@@ -1,12 +1,8 @@
 <template>
   <!-- 할일 항목을 표시하는 li 컴포넌트 -->
-  <li
-    :class="
-      todoItem.done
-        ? 'list-group-item list-group-item-success'
-        : 'list-group-item'
-    "
-  >
+  <li class="m-1"> 
+    <img :src="ProductItem.image" alt="상품 이미지" class="product-image" />
+
     <!-- 내용을 표시하는 span -->
     <span :class="item">
       {{ ProductItem.title }}
