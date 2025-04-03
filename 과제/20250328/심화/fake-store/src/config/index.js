@@ -1,8 +1,11 @@
 export default {
-  title: 'Fake Store', // 메인 타이틀
-  subtitle: 'Vue3 연습 사이트 ', // 서브 타이틀
+  /* Header 컴포넌트에서 사용할 데이터터 */
+  title: 'Fake Store', // 메인타이틀
+  subtitle: 'Vue3 연습사이트', // 서브타이틀
+
+  /* Navbar 컴포넌트 - MenuGroup 컴포넌트에서 사용할 데이터 */
   menus: [
-    //메인 메뉴 구성 정보
+    // 메인 메뉴 구성정보
     {
       title: '가전',
       url: '/electronics',
@@ -12,7 +15,7 @@ export default {
     {
       title: '주얼리',
       url: '/jewelery',
-      icon: 'fa-solid fagem',
+      icon: 'fa-solid fa-gem',
     },
     {
       title: '남성의류',

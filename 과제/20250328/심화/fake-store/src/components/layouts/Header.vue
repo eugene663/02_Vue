@@ -18,7 +18,7 @@ import config from '@/config';
 <!-- 해당 컴포넌트에서만 적용되는 스타일 -->
 <style scoped>
 .jumbotron {
-  background-image: url('@/assets/background.jpg');
+  background-image: url('@/assets/bg_image.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
