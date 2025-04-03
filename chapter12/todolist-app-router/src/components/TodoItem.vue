@@ -7,6 +7,9 @@
         : 'list-group-item'
     "
   >
+    <!-- 아이템 이미지 표시 -->
+    <img :src="ProductItem.image" alt="상품 이미지" class="product-image" />
+
     <!-- 할일 내용을 표시하는 span -->
     <span
       :class="todoItem.done ? 'todo-done pointer' : 'pointer'"
