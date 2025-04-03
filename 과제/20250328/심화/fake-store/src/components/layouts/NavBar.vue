@@ -26,14 +26,14 @@
 </template>
 
 <script setup>
-import config from '@/config'; // src/config/index.js 모듈에서 데이터 가져오기
+import config from '@/config';
 import { reactive, computed } from 'vue';
 import MenuGroup from './menu/MenuGroup.vue';
 
 // 상태 관리 객체 생성
 let state = reactive({ isNavShow: false });
 
-// 메뉴 햄버거 버튼 클릭 시 메뉴 보여줄지 안보여줄지 결정
+// 메뉴 햄버거 버튼 클릭 -> 메뉴를 보여줄지 말지
 let navClass = computed(() =>
   state.isNavShow ? 'collapse navbar-collapse show' : 'collapse navbar-collapse'
 );

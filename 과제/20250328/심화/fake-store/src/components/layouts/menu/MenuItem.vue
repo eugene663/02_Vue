@@ -1,5 +1,3 @@
-<!-- 메뉴 아이템 컴포넌트 -->
-
 <template>
   <li class="nav-item">
     <!-- props로 전달 받은 menu객체의 url 속성 값을 router-link의 to 속성에 대입 -->

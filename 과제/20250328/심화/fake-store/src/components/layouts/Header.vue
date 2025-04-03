@@ -1,6 +1,6 @@
 <!-- 헤더 컴포넌트 -->
 <template>
-  <div class="jumbotron p-5 bg-primary text-white">
+  <div class="back p-5 bg-primary text-white">
     <h1>
       <span>{{ config.title }}</span>
     </h1>
@@ -17,16 +17,11 @@ import config from '@/config';
 
 <!-- 해당 컴포넌트에서만 적용되는 스타일 -->
 <style scoped>
-.jumbotron {
+.back {
   background-image: url('@/assets/bg_image.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   padding: 2rem;
-}
-
-.jumbotron > * > span {
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 3px 10px;
 }
 </style>
